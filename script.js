@@ -52,4 +52,57 @@ const shoppingCart = {
 //logg ut green apple
 console.log(shoppingCart.fruits[0].apple[1]);
 
+/*
+function hasClass(element, className) {
+    return element.classList.contains(className);
+  }
 
+const element = document.querySelector('.example');
+console.log(hasClass(element, 'example')); // true or false
+*/
+
+const frukt = ["Banana", "Orange", "Apple", "Mango"];
+let text = frukt.constructor;
+console.log(text);
+
+let numbers = new Array(1, 2, 3, 4, 5, 76, 7, 8);
+console.log(numbers);
+console.log(numbers.length);
+
+frukt.forEach(function (thefrukt) {
+    console.log(thefrukt + "testing the non-arrow inline function");
+});
+
+for (const number of numbers) {
+    console.log(number);
+};
+
+for (const frukten of frukt) {
+    console.log(frukten);
+};
+
+frukt.forEach((bla, blabla, blablabla) => {
+    console.log(`Index: ${blabla}, Value: ${bla}, Array: ${blablabla} tester foreach med tre argumenter`);
+});
+
+let total = 0;
+numbers.forEach((tall) => {
+    console.log(total);
+    total += tall;
+    console.log(total);
+});
+
+for (let i = 0; i < frukt.length; i++) {
+    console.log(frukt[i] + " fra ekte for-loop!!!");
+};
+
+for (let yo = 0; yo < numbers.length; yo++) {
+    console.log(numbers[yo] + " fra ekte loop!");
+};
+
+function logElement (element) {
+    console.log("logging element " + element)
+};
+
+frukt.forEach(logElement);
+numbers.forEach(logElement);
