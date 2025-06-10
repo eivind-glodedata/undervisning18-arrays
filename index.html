@@ -46,6 +46,22 @@
     </main>
     <footer>
       <h4>Laget av Julie</h4>
+      <h2>Random String Generator</h2>
+    <h4 id="target"></h4>
+    <input id="strlength" type="number" value="5" min="1" max="100">
+    <button id="gen" onClick="generate()">Generate</button>
+    <button onclick="this.style.display='none'">Click to remove me!</button>
+    <script>
+    function generate() {
+        let length = document.getElementById("strlength").value;
+        let result = ' ';
+        for(let i = 0; i < length; i++) {
+            result += 
+            String.fromCharCode(97 + Math.floor(Math.random() * 26));
+        }
+        document.getElementById("target").innerHTML = result
+    }
+    </script>
     </footer>
   </body>
 </html>

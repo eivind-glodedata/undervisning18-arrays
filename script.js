@@ -1,3 +1,5 @@
+//"use strict";
+
 // Basic array / Flat array
 // square bracket
 
@@ -106,3 +108,49 @@ function logElement (element) {
 
 frukt.forEach(logElement);
 numbers.forEach(logElement);
+
+for (let test = 0; test < frukt.length; test++) {
+    console.log(`Frukten er ${frukt[test]}`)
+}
+
+function addNumbers(a, b) {
+    console.log("adderingsfunksjonen blir brukt")
+    return a + b;
+}
+
+const result = addNumbers(34, 44);
+console.log(`adderingfen er ${result}`)
+
+const persona = {
+    firstName : "John",
+    lastName : "Doe",
+    id : 5566,
+    fullName : function() {
+        return this.lastName + this.firstName;
+    }
+ };
+
+ const bala = persona.fullName();
+
+ console.log(bala);
+
+ const animal = {
+    type: "dog"
+ };
+
+ animal.speak = function() {
+    return "Woof!"
+ }
+
+ console.log(animal);
+
+ console.log(animal.speak());
+
+ console.log(this);
+
+ let x = this;
+ console.log(x);
+
+ const teststring = "esihjtresiutwoi43t43wkj5";
+ const testlength = teststring.length;
+console.log(testlength + "er lengden");
